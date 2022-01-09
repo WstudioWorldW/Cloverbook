@@ -70,3 +70,36 @@ $gutters-side: 30px / 2;
         font-size: 16px;
     }  
 }
+
+.logo {
+    border: 2px solid #000;
+    border-radius: 100%;
+    padding: 5px;
+
+    @include media ($xs) {
+        width: 50px;
+        height: 50px;
+    }  
+
+    &__footer {
+        border: 2px solid #fff;
+        border-radius: 100%;
+        padding: 5px;
+
+        @include media ($md) {
+            width: 40px;
+            height: 40px;
+        } 
+
+        &-mini {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            padding: 2px;
+            margin: 0  0 0 10px;
+        }
+
+    }
+
+}

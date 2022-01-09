@@ -1,5 +1,5 @@
 <template>
-  <layout />
+  <Layout />
 </template>
 
 <style lang="scss">
@@ -13,11 +13,11 @@
 
 <script>
 
-import layout from './layouts/layout.vue'
+import Layout from './layouts/Layout.vue';
 
 export default {
     components: {
-        layout
+        Layout
     }
 }
 
