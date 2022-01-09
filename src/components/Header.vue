@@ -6,7 +6,7 @@
                 <div class="header__logo-container">
                     <div class="header__logo">
                         <img src="../assets/img/Logo.png" alt="logo" class="logo">
-                        <p class="header__logo-title">Clovebook</p>
+                        <h1 class="header__logo-title">Clovebook</h1>
                     </div>
                     <div class="header__icons">
                         <ul class="header__icons-ul">
@@ -52,7 +52,6 @@ export default {
 .header {
     
     margin-top: 30px;
-    height: 100vh;
 
     @include media ($lg) {
         margin-top: 20px;

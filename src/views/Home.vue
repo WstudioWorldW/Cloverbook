@@ -1,14 +1,15 @@
 <template>
-  <div class="home">
-
-  </div>
+    <Slider />
 </template>
 
 <script>
 
+import Slider from '../pages/home-page/Slider.vue'
 
 export default {
-
+    components: {
+      Slider
+    }
 }
 
 </script>
