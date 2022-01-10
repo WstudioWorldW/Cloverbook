@@ -9,9 +9,10 @@
                             <p class="slider__text"> {{ slider.text }} </p>
                         </div>
                         <div class="slider__button-container">
-                            <button class="slider__button one" @click="sliderMove(1)"></button>
-                            <button class="slider__button two" @click="sliderMove(2)"></button>
-                            <button class="slider__button three" @click="sliderMove(3)"></button>
+                            <button class="slider__button one" 
+                                v-for="slider in sliders" :key="slider" 
+                                @click="sliderMove(slider.slide)">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -29,19 +30,21 @@ export default {
 
         sliders: [
             {
-                imgPath: '/img/slider-img-1.2f6fefa1.png', 
+                slide: 0,
+                imgPath: require('@/assets/img/slider-img-1.png'), 
                 title: 'Книги наше всё!', 
                 text: `А также акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины 
                        в целом, однако конкретные выводы, разумеется, своевременно верифицированы!`
             },
             {
-                imgPath: '/img/slider-img-2.44763aad.png', 
+                slide: 1,
+                imgPath: require('@/assets/img/slider-img-2.png'), 
                 title: 'Красивая библиотека!', 
                 text: `А также акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины 
                        в целом, однако конкретные выводы, разумеется, своевременно верифицированы!`
             },
-            {
-                imgPath: '/img/slider-img-3.bd7281ff.png', 
+            {   slide: 2,
+                imgPath: require('@/assets/img/slider-img-3.png'), 
                 title: 'Молодые авторы!', 
                 text: `А также акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины 
                        в целом, однако конкретные выводы, разумеется, своевременно верифицированы!`
@@ -72,19 +75,7 @@ export default {
         },
 
         sliderMove (number) {
-            let sliderLine = this.$refs.line;
-
-            if (number === 1) {
-                sliderLine.style.transform = `translateX(${-this.returnWidth() * 0}px)`;
-            }
-
-            if (number === 2) {
-                sliderLine.style.transform = `translateX(${-this.returnWidth() * 1}px)`;
-            }
-
-            if (number === 3) {
-                sliderLine.style.transform = `translateX(${-this.returnWidth() * 2}px)`;
-            }
+            return this.$refs.line.style.transform = `translateX(${-this.returnWidth() * number}px)`;
         }
     },
 
