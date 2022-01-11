@@ -11,10 +11,10 @@
                     <img src="../../assets/img/crime.png" alt="" class="buybook__content-cover-img">
                 </div>
                 <div class="buybook__content-info">
-                    <h2 class="buybook__content-info-title">{{btitle}}</h2>
-                    <h3 class="buybook__content-info-author">Автор: {{author}}</h3>
+                    <h2 class="buybook__content-info-title">Преступление и наказание</h2>
+                    <h3 class="buybook__content-info-author">Федор Достоевский</h3>
                     <h3 class="buybook__content-info-plot">Кратко о сюжете:</h3>
-                    <p class="buybook__content-info-plot-text">{{plot}}</p>
+                    <p class="buybook__content-info-plot-text">Нищий студент совершает убийство богатой старухи ради наживы. После добровольного признания герой отбывает наказание на каторге, где происходи его духовное перерождение.</p>
                     <div class="buybook__content-info-btn">
                         <router-link to="" class="buybook__content-info-btn-b">Купить</router-link>
                     </div>
@@ -24,16 +24,6 @@
     </div>
     </div>
 </template>
-
-<script>
-export default {
-    data: () => ({
-        btitle: 'Преступление и наказание',
-        author: 'Федор Достоевский',
-        plot: 'Нищий студент совершает убийство богатой старухи ради наживы. После добровольного признания герой отбывает наказание на каторге, где происходи его духовное перерождение.'
-    })
-}
-</script>
 
 <style lang="scss">
 
