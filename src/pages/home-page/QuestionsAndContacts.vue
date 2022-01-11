@@ -10,13 +10,9 @@
                     <div class="questions__content-q">
                         <h2 class="questions__content-q-title">Часто задaваемые вопросы:</h2>
                     <ul class="questions__content-q-list">
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Почему именно у нас?</router-link></li>
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Зачем читать книгу?</router-link></li>
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Есть ли у нас акции?</router-link></li>
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Об авторском праве</router-link></li>
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Где купить книгу?</router-link></li>
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Где находитесь?</router-link></li>
-                        <li class="questions__content-q-list-l"><router-link to="" class="questions__content-q-list-l-link">Качество книг</router-link></li>
+                        <li class="questions__content-q-list-l" v-for="question in questions" :key="question">
+                            <router-link to="" class="questions__content-q-list-l-link">{{ question }}</router-link>
+                        </li>
                     </ul>
                     </div>
                     <div class="questions__content-c">
@@ -34,6 +30,14 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data: () => ({
+        questions: ['Почему именно у нас?','Зачем читать книгу?','Есть ли у нас акции?','Об авторском праве','Где купить книгу?','Где находитесь?','Качество книг']
+    })
+}
+</script>
 
 <style lang="scss">
 
