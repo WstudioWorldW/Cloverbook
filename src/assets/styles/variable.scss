@@ -1,0 +1,105 @@
+$lg: 1215px;
+$md: 990px;
+$sm: 800px;
+$xs: 576px;
+$mini: 450px;
+$collumns: 12;
+$gutters: 30px;
+$gutters-side: 30px / 2;
+
+@mixin container($padding: $gutters-side) {
+    max-width: $lg;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $padding;
+    @include media($lg) {
+        max-width: $md;
+    }
+    @include media($md) {
+        max-width: $sm;
+    }
+    @include media($sm) {
+        max-width: $xs;
+    }
+    @include media($xs) {
+        max-width: $mini;
+    }
+    @include media($mini) {
+        max-width: 100%;
+    }
+}
+
+@mixin row($margin: $gutters-side) {
+    display: flex;
+    flex-wrap: wrap;
+    @if $margin != 0 {
+        margin: 0 -$margin;
+    }
+}
+
+@mixin media($size: $lg) {
+    @media (max-width:$size) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.icons {
+    font-size: 25px;
+    color: #000;
+
+    @include media ($lg) {
+        font-size: 20px;
+    }  
+
+    @include media ($xs) {
+        font-size: 16px;
+    }  
+}
+
+.logo {
+    border: 2px solid #000;
+    border-radius: 100%;
+    padding: 5px;
+
+    @include media ($xs) {
+        width: 50px;
+        height: 50px;
+    }  
+
+    &__footer {
+        border: 2px solid #fff;
+        border-radius: 100%;
+        padding: 5px;
+
+        @include media ($md) {
+            width: 40px;
+            height: 40px;
+        } 
+
+        &-mini {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            padding: 2px;
+            margin: 0  0 0 10px;
+        }
+
+    }
+
+}
