@@ -1,5 +1,4 @@
 <template>
-
     <header class="header">
         <div class="container">
             <div class="header__container">
@@ -28,7 +27,6 @@
             </nav>
         </div>
     </header>
-
 </template>
 
 <script>
@@ -44,10 +42,7 @@ export default {
 
 <style lang="scss">
 
-@import '../assets/styles/variable.scss';
-
-// .header имеет высоту 100vh, 
-// при дальнейшей верстки следует отключить это сойство
+@import '@/assets/styles/variable.scss';
 
 .header {
     

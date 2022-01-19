@@ -22,12 +22,9 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
 
 export default {
     data: () => ({
-        activeSlide: 1,
-
         sliders: [
             {
                 slide: 0,
